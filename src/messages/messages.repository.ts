@@ -1,5 +1,5 @@
 import { Injectable } from "@nestjs/common";
-import { promises as fsPromises, readFileSync, writeFileSync } from "fs";
+import { readFileSync, writeFileSync } from "fs";
 
 @Injectable()
 export class MessagesRepository {
