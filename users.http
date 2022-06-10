@@ -1,0 +1,9 @@
+### Create a new message
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "ramin@gmail.de",
+    "password": "a123",
+    "whitelist": "this will be removed because white list checked in main.ts file."
+}
