@@ -3,7 +3,24 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email": "ramin@gmail.de",
-    "password": "a123",
+    "email": "armin@kk.de",
+    "password": "zirna",
     "whitelist": "this will be removed because white list checked in main.ts file."
 }
+
+### Find a user by id
+GET http://localhost:3000/auth/5
+
+### Find all emails
+GET http://localhost:3000/auth?email=armin@gmail.de
+
+### Update user data
+PATCH http://localhost:3000/auth/9
+Content-Type: application/json
+
+{
+    "email": "mahnaz@you.de"
+}
+
+### Delete a user by id
+DELETE http://localhost:3000/auth/2
