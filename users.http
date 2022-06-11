@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
     "email": "armin@kk.de",
-    "password": "zirna",
+    "password": "dada",
     "whitelist": "this will be removed because white list checked in main.ts file."
 }
 
@@ -12,7 +12,7 @@ Content-Type: application/json
 GET http://localhost:3000/auth/5
 
 ### Find all emails
-GET http://localhost:3000/auth?email=armin@gmail.de
+GET http://localhost:3000/auth?email=armin@kk.de
 
 ### Update user data
 PATCH http://localhost:3000/auth/9
