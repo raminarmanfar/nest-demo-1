@@ -1,12 +1,27 @@
-### Create a new message
+### Signup a new user
 POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email": "armin@kk.de",
-    "password": "dada",
+    "email": "hadi@your-mail.de",
+    "password": "my-pass",
     "whitelist": "this will be removed because white list checked in main.ts file."
 }
+
+### Singin a user with email and password
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "ramin@your-mail.de",
+    "password": "my-pass"
+}
+
+### Who am i?
+GET http://localhost:3000/auth/whoami
+
+### Singout the current user
+POST http://localhost:3000/auth/singout
 
 ### Find a user by id
 GET http://localhost:3000/auth/5

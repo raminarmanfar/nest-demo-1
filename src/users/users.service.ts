@@ -13,7 +13,7 @@ export class UsersService {
   }
 
   findOne(id: number): Promise<User> {
-    return this.repo.findOne({where: { id }});
+    return id ? this.repo.findOne({where: { id }}) : null;
   }
 
   findEmails(email: string): Promise<User[]> {
@@ -23,7 +23,7 @@ export class UsersService {
   async update(id: number, updatedUser: Partial<User>) {
     const user = await this.findOne(id);
     if (!user) {
-        throw new NotFoundException('user not found');
+        throw new NotFoundException(`user with id ${id} not found`);
     }
 
     Object.assign(user, updatedUser);
@@ -33,7 +33,7 @@ export class UsersService {
   async remove(id: number): Promise<User> {
     const user = await this.findOne(id);
     if (!user) {
-        throw new NotFoundException('user not found');
+        throw new NotFoundException(`user with id ${id} not found`);
     }
 
     return this.repo.remove(user);
